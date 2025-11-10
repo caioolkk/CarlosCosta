@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Costa | Fotografia</title>
+    <meta name="description" content="Fotografia profissional de casamentos em Recife com Carlos Ferreira. Pacotes personalizados para o seu grande dia.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Variáveis globais */
+        :root {
+            --primary-color: #d4af37; /* Dourado elegante */
+            --primary-dark: #b89722;
+            --secondary-color: #2c2c2c;
+            --light-color: #f8f7f5;
+            --dark-color: #1a1a1a;
+            --gray-color: #6c757d;
+            --light-gray: #e9ecef;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
+            --border-radius: 4px;
+            --container-width: 1320px;
+            --font-primary: 'Cormorant Garamond', serif;
+            --font-secondary: 'Montserrat', sans-serif;
+        }
+
+        /* Reset e estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            color: var(--dark-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-primary);
+            font-size: 2.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 25px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn:hover::before {
+            transform: translateX(0);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline::before {
+            background: var(--primary-color);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-bg {
+            background-color: var(--light-color);
+        }
+
+        /* Header styles */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            padding: 18px 0;
+            transition: var(--transition);
+        }
+
+        .site-header.scrolled {
+            padding: 12px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-primary);
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .main-nav ul li {
+            margin-left: 38px;
+        }
+
+        .main-nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .main-nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .main-nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .main-nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            height: 28px;
+            justify-content: space-between;
+            width: 32px;
+            z-index: 2000;
+        }
+
+        .menu-toggle span {
+            background-color: var(--secondary-color);
+            display: block;
+            height: 3px;
+            width: 100%;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1516002526317-10f7f75c890f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-primary);
+            font-size: 4.2rem;
+            font-weight: 300;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .hero-content h1 span {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.6) 100%);
+            z-index: 1;
+        }
+
+        /* Sobre section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            position: relative;
+        }
+
+        .about-text::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -25px;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, transparent, var(--primary-color), transparent);
+        }
+
+        .about-text h3 {
+            font-family: var(--font-primary);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .signature {
+            font-family: var(--font-primary);
+            font-size: 2.3rem;
+            font-style: italic;
+            color: var(--primary-color);
+            margin: 30px 0 20px;
+            position: relative;
+        }
+
+        .signature::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 1px;
+            background-color: var(--primary-color);
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, rgba(212, 175, 55, 0.15), transparent);
+            z-index: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Portfolio section */
+        .portfolio {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23d4af37" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
+            opacity: 0.04;
+            z-index: 0;
+        }
+
+        .portfolio-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .portfolio-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .portfolio-intro p {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            margin-top: 15px;
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 45px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 420px;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h3 {
+            font-family: var(--font-primary);
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .portfolio-overlay p {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transform: translateY(20px);
+            transition: var(--transition);
+            transition-delay: 0.1s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay h3,
+        .portfolio-item:hover .portfolio-overlay p {
+            transform: translateY(0);
+        }
+
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1) rotate(0.5deg);
+        }
+
+        /* Services section */
+        .services-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .services-header p {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            margin-top: 15px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .packages-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .package {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+        }
+
+        .package:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .package-header {
+            padding: 35px 25px 25px;
+            position: relative;
+        }
+
+        .package-title {
+            font-family: var(--font-primary);
+            font-size: 2.1rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .package-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .package-price {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 18px;
+            text-align: center;
+        }
+
+        .price-value {
+            font-family: var(--font-primary);
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: white;
+            margin: 5px 0;
+        }
+
+        .price-installment {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin-top: 3px;
+        }
+
+        .price-discount {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .package-content {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .package-features li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 28px;
+            font-size: 1.05rem;
+        }
+
+        .package-features li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .package-delivery h4 {
+            font-family: var(--font-primary);
+            color: var(--secondary-color);
+            margin-bottom: 18px;
+            font-size: 1.35rem;
+        }
+
+        .package-delivery ul {
+            list-style: none;
+        }
+
+        .package-delivery ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 28px;
+            color: var(--gray-color);
+        }
+
+        .package-delivery ul li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .package-highlight {
+            background: rgba(212, 175, 55, 0.08);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--secondary-color);
+            text-align: left;
+            position: relative;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .package-footer {
+            padding: 0 25px 25px;
+        }
+
+        /* Adicionais section */
+        .additionals-container {
+            max-width: 1100px;
+            margin: 60px auto 0;
+        }
+
+        .additionals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .additional-item {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .additional-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .additional-item h3 {
+            font-family: var(--font-primary);
+            font-size: 1.45rem;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+        }
+
+        .additional-price {
+            font-family: var(--font-primary);
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Contact section */
+        .contact {
+            background: linear-gradient(rgba(44, 44, 44, 0.9), rgba(44, 44, 44, 0.9)), url('https://images.unsplash.com/photo-1527530467386-47f38f9b7d86?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23ffffff" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .contact .section-header h2 {
+            color: white;
+        }
+
+        .contact .section-header h2::after {
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info .info-item {
+            display: flex;
+            margin-bottom: 35px;
+        }
+
+        .contact-info .info-icon {
+            min-width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .contact-info .info-content h4 {
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .contact-info .info-content p, 
+        .contact-info .info-content a {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-info .info-content a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: var(--border-radius);
+            background: rgba(255, 255, 255, 0.92);
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-note {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--secondary-color);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 80px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 45px;
+        }
+
+        .footer-logo {
+            margin-bottom: 25px;
+        }
+
+        .footer-logo h3 {
+            font-family: var(--font-primary);
+            font-size: 2rem;
+            color: white;
+        }
+
+        .footer-logo h3 span {
+            color: var(--primary-color);
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            max-width: 350px;
+        }
+
+        .footer-links h4 {
+            font-family: var(--font-primary);
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .footer-links ul li a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            opacity: 0;
+            transition: var(--transition);
+            transform: translateX(-5px);
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+            padding-left: 20px;
+        }
+
+        .footer-links ul li a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-contact i {
+            color: var(--primary-color);
+            margin-right: 15px;
+            min-width: 20px;
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-top: 30px;
+        }
+
+        /* Pacotes colors */
+        .package.bronze .package-header {
+            background: linear-gradient(135deg, #a67c52, #8c6239);
+        }
+
+        .package.silver .package-header {
+            background: linear-gradient(135deg, #a9a9a9, #757575);
+        }
+
+        .package.gold .package-header {
+            background: linear-gradient(135deg, #d4af37, #b89722);
+        }
+
+        /* Responsividade */
+        @media (max-width: 1199px) {
+            .hero-content h1 {
+                font-size: 3.6rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav ul {
+                position: fixed;
+                top: 75px;
+                right: -100%;
+                width: 280px;
+                height: calc(100vh - 75px);
+                background: white;
+                flex-direction: column;
+                padding: 40px 0;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                align-items: center;
+            }
+            
+            .main-nav ul.active {
+                right: 0;
+            }
+            
+            .main-nav ul li {
+                margin: 20px 0;
+            }
+            
+            .main-nav ul li a {
+                font-size: 1.2rem;
+                padding: 8px 25px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.4rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.6rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.1rem;
+            }
+            
+            .section-header h2::after {
+                width: 60px;
+            }
+            
+            .portfolio-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .package-title {
+                font-size: 1.8rem;
+            }
+            
+            .price-value {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-text h3 {
+                font-size: 1.8rem;
+            }
+            
+            .signature {
+                font-size: 1.9rem;
+            }
+            
+            .package {
+                margin-bottom: 20px;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">Carlos<span>Costa</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Capturando as <span>Emoções</span> do seu Grande Dia</h1>
+            <p>Fotografia de casamento com sensibilidade e elegância em Recife</p>
+            <a href="#contato" class="btn">Agendar Consultoria</a>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section section-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>A Minha História</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Transformando momentos em eternas memórias</h3>
+                    <p>Olá, futuros casais encantadores! Sou Carlos, o fotógrafo entusiasta por trás da lente, pronto para tornar o seu casamento uma experiência inesquecível!</p>
+                    <p>Com uma energia contagiente e uma paixão ardente pela captura de momentos autênticos, estou aqui para garantir que cada instante do seu grande dia seja imortalizado com toda a animação e vitalidade que vocês merecem.</p>
+                    <p>Desde os momentos de nervosismo até as explosões de alegria, estou comprometido em não apenas documentar, mas também celebrar a essência única do amor que compartilham.</p>
+                    <div class="signature">Carlos Costa</div>
+                    <p>Vamos juntos transformar sua história de amor em imagens vibrantes e cheias de vida que serão tesouros para toda a eternidade!</p>
+                </div>
+                <div class="about-image">
+                    <img src="/image/Carlos.png" alt="Carlos Costa, Fotógrafo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio">
+        <div class="container portfolio-container">
+            <div class="section-header">
+                <h2>O Meu Trabalho</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="portfolio-intro">
+                <p>Cada casamento é uma história única. Aqui estão alguns dos momentos especiais que tive a honra de registrar.</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos os Trabalhos</button>
+                <button class="filter-btn" data-filter="casamento">Casamentos</button>
+                <button class="filter-btn" data-filter="pre-wedding">Pré-Wedding</button>
+                <button class="filter-btn" data-filter="ensaio">Ensaios</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Portfolio items -->
+                <div class="portfolio-item" data-category="casamento">
+                    <img src="image/MARCHA-PRA-JESUS-2024-38.jpg" alt="Casamento - João e Maria" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        
+                        <p>Casamento</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="casamento">
+                    <img src="image/DSC03472.jpg" alt="Casamento - Pedro e Ana" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        
+                        <p>Casamento</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="pre-wedding">
+                    <img src="image/DSC02568.jpg" alt="Pré-Wedding - Lucas e Carla" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        
+                        <p>Pré-Wedding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="ensaio">
+                    <img src="image/IMG_2648.JPG" alt="Ensaio Civil - Rafael e Juliana" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <p>Ensaio</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="casamento">
+                    <img src="image/Viviane e Rogerio-802.jpg" alt="Casamento - Thiago e Sofia" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <p>Casamento</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="pre-wedding">
+                    <img src="image/IMG_2669.JPG" alt="Pré-Wedding - Daniel e Beatriz" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <p>Pré-Wedding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="ensaio">
+                    <img src="image/IMG_2660.JPG" alt="Pré-Wedding - Daniel e Beatriz" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <p>Ensaio</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="ensaio">
+                    <img src="image/IMG_2666.JPG" alt="Pré-Wedding - Daniel e Beatriz" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <p>Ensaio</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="pre-wedding">
+                    <img src="image/IMG_2662.JPG" alt="Pré-Wedding - Daniel e Beatriz" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <p>Pré-Wedding</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="section section-bg">
+        <div class="container">
+            <div class="services-header">
+                <h2>Nossos Pacotes Exclusivos</h2>
+                <div class="divider"></div>
+                <p>Desenvolvi pacotes pensando em cada etapa especial do seu casamento, com entrega rápida e qualidade excepcional.</p>
+            </div>
+            
+            <div class="packages-container">
+                <div class="package bronze">
+                    <div class="package-header">
+                        <h3 class="package-title">Sweet Dream</h3>
+                        <div class="package-badge">Bronze</div>
+                    </div>
+                    <div class="package-price">
+                        <div class="price-value">R$ 1.500,00</div>
+                        <div class="price-installment">10x de R$ 170,00</div>
+                        <div class="price-discount">À vista</div>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Cobertura da cerimônia e recepção</li>
+                            <li><i class="fas fa-check-circle"></i> Making off da noiva</li>
+                            <li><i class="fas fa-check-circle"></i> Um fotógrafo</li>
+                        </ul>
+                        <div class="package-delivery">
+                            <h4>Entrega:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Mínimo de 300 fotos</li>
+                                <li><i class="fas fa-check-circle"></i> Todas as fotos entregues em até 30 dias</li>
+                                <li><i class="fas fa-check-circle"></i> Tratadas, em galeria digital e em alta resolução</li>
+                            </ul>
+                            <div class="package-highlight">
+                                Presente no fechamento à vista: Entrega em 15 dias
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#contato" class="btn btn-outline">Contratar Pacote</a>
+                    </div>
+                </div>
+                
+                <div class="package silver">
+                    <div class="package-header">
+                        <h3 class="package-title">All Of Me</h3>
+                        <div class="package-badge">Silver</div>
+                    </div>
+                    <div class="package-price">
+                        <div class="price-value">R$ 2.500,00</div>
+                        <div class="price-installment">10x de R$ 270,00</div>
+                        <div class="price-discount">À vista</div>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Cobertura de 12h do evento</li>
+                            <li><i class="fas fa-check-circle"></i> Ensaio pré wedding ou civil</li>
+                            <li><i class="fas fa-check-circle"></i> Making off dos noivos</li>
+                            <li><i class="fas fa-check-circle"></i> Cerimônia + recepção</li>
+                            <li><i class="fas fa-check-circle"></i> Um fotógrafo</li>
+                            <li><i class="fas fa-check-circle"></i> Um videomaker</li>
+                            <li><i class="fas fa-check-circle"></i> Teaser film</li>
+                        </ul>
+                        <div class="package-delivery">
+                            <h4>Entrega:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Mínimo de 300 fotos</li>
+                                <li><i class="fas fa-check-circle"></i> Prévia no mesmo dia</li>
+                                <li><i class="fas fa-check-circle"></i> Todas as fotos entregues em até 15 dias</li>
+                                <li><i class="fas fa-check-circle"></i> Tratadas, em galeria digital e em alta resolução</li>
+                                <li><i class="fas fa-check-circle"></i> Fotolivro 19x28 com 20 lâminas</li>
+                            </ul>
+                            <div class="package-highlight">
+                                Presente no fechamento à vista: Entrega em 7 dias
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#contato" class="btn">Contratar Pacote</a>
+                    </div>
+                </div>
+                
+                <div class="package gold">
+                    <div class="package-header">
+                        <h3 class="package-title">Real Love</h3>
+                        <div class="package-badge">Gold</div>
+                    </div>
+                    <div class="package-price">
+                        <div class="price-value">R$ 4.500,00</div>
+                        <div class="price-installment">10x de R$ 500,00</div>
+                        <div class="price-discount">À vista</div>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check-circle"></i> Cobertura de todo o evento</li>
+                            <li><i class="fas fa-check-circle"></i> Ensaio pré wedding ou civil</li>
+                            <li><i class="fas fa-check-circle"></i> Making off dos noivos</li>
+                            <li><i class="fas fa-check-circle"></i> Cerimônia + recepção</li>
+                            <li><i class="fas fa-check-circle"></i> Dois fotógrafos</li>
+                            <li><i class="fas fa-check-circle"></i> Dois videomakers</li>
+                            <li><i class="fas fa-check-circle"></i> Filme completo + teaser film</li>
+                        </ul>
+                        <div class="package-delivery">
+                            <h4>Entrega:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Mínimo de 300 fotos</li>
+                                <li><i class="fas fa-check-circle"></i> Prévia no mesmo dia</li>
+                                <li><i class="fas fa-check-circle"></i> Todas as fotos entregues em até 7 dias</li>
+                                <li><i class="fas fa-check-circle"></i> Tratadas, em galeria digital e em alta resolução</li>
+                                <li><i class="fas fa-check-circle"></i> Caixa especial em madeira com 40 fotos impressas e pendrive com todas as fotos</li>
+                            </ul>
+                            <div class="package-highlight">
+                                Presente no fechamento à vista: Álbum 20x25 com 20 páginas com 1 mini álbum
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#contato" class="btn">Contratar Pacote Premium</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additionals-container">
+                <div class="section-header">
+                    <h2>Serviços Adicionais</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="additionals-grid">
+                    <div class="additional-item">
+                        <h3>Teaser Film</h3>
+                        <span class="additional-price">R$ 800,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Filme Completo</h3>
+                        <span class="additional-price">R$ 2.000,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Same Day</h3>
+                        <span class="additional-price">R$ 800,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Filme do Ensaio</h3>
+                        <span class="additional-price">R$ 600,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Álbum 20 Páginas</h3>
+                        <span class="additional-price">R$ 1.000,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Álbum 40 Páginas</h3>
+                        <span class="additional-price">R$ 2.000,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Story Maker</h3>
+                        <span class="additional-price">R$ 700,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Cobertura Civil</h3>
+                        <span class="additional-price">R$ 700,00</span>
+                    </div>
+                    <div class="additional-item">
+                        <h3>Pre Wedding</h3>
+                        <span class="additional-price">R$ 700,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vamos Conversar?</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Telefone</h4>
+                            <p>(81) 99700-2597</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>carlos.edu.photography@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Localização</h4>
+                            <p>Recife - Pernambuco</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Siga meu trabalho</h4>
+                            <div class="social-links">
+                                <a href="https://instagram.com/carlosferreira.photo" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo*</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone*</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <div class="form-note">Ao enviar, você concorda em receber contato via WhatsApp</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem*</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Carlos<span>Costa</span></h3>
+                    <div class="footer-about">
+                        <p>Fotografia de casamento com sensibilidade e elegância. Transformando momentos especiais em memórias eternas desde 2018.</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Menu Principal</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Mim</a></li>
+                        <li><a href="#portfolio">Meu Portfólio</a></li>
+                        <li><a href="#servicos">Pacotes e Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato Direto</h4>
+                    <p><i class="fas fa-phone"></i> (81) 99700-2597</p>
+                    <p><i class="fas fa-envelope"></i> carlos.edu.photography@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Recife - PE</p>
+                    <p><i class="fas fa-clock"></i> Segunda a Sábado: 9h-19h</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Carlos Costa Fotografia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu toggle for mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.main-nav ul');
+            
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                
+                // Animate the hamburger icon to X
+                const spans = menuToggle.querySelectorAll('span');
+                if (menuToggle.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans[0].style.transform = 'rotate(0deg)';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Close menu when clicking on a nav link (mobile)
+            document.querySelectorAll('.main-nav ul li a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    
+                    // Reset hamburger icon
+                    const spans = menuToggle.querySelectorAll('span');
+                    spans[0].style.transform = 'rotate(0deg)';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'rotate(0deg)';
+                });
+            });
+            
+            // Header scroll effect
+            const header = document.querySelector('.site-header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#' || !targetId) return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('.site-header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Portfolio filtering functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Filter portfolio items
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Form submission to WhatsApp
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+                
+                // Format WhatsApp message
+                const whatsappMessage = `*Olá Carlos Ferreira!*%0A%0ARecebi uma nova mensagem através do seu site:%0A%0A*Nome:* ${name}%0A*Email:* ${email}%0A*Telefone:* ${phone}%0A*Mensagem:* ${message}%0A%0AEstou interessado(a) nos seus serviços de fotografia de casamento.`;
+                
+                // WhatsApp number (based on PDF)
+                const whatsappNumber = '5581997002597'; // Format: country code + area code + number
+                
+                // Open WhatsApp with pre-filled message
+                window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+                
+                // Show success message
+                alert('Sua mensagem foi enviada com sucesso! Em breve você receberá uma resposta pelo WhatsApp.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+            
+            // Initialize the header scroll effect
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            }
+            
+            // Reveal animation on scroll
+            const revealElements = document.querySelectorAll('.package, .portfolio-item, .additional-item');
+            
+            const revealOnScroll = function() {
+                revealElements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial styles for animation
+            revealElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            window.addEventListener('scroll', revealOnScroll);
+            window.addEventListener('load', revealOnScroll);
+        });
+    </script>
+</body>
+</html>
